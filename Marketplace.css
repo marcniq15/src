@@ -1,0 +1,27 @@
+.marketplace-page {
+  padding: 0 16px;
+}
+
+.marketplace-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.marketplace-header h1 {
+  margin: 0;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 16px;
+}
+
+/* On larger screens, you can add more columns */
+@media (min-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,0 +1,135 @@
+k.profile-page {
+  padding: 16px;
+}
+
+/* --- Header --- */
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.profile-avatar-container {
+  flex-shrink: 0;
+  margin-right: 28px;
+}
+
+.profile-avatar-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-avatar-icon {
+  font-size: 90px;
+  color: #dbdbdb;
+}
+
+.profile-header-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.profile-username {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.profile-btn {
+  padding: 8px 12px;
+  border: 1px solid #dbdbdb;
+  background-color: #fafafa;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* --- Bio & Info --- */
+.profile-info {
+  margin-bottom: 24px;
+}
+
+.profile-fullname {
+  font-weight: 600;
+  margin: 0;
+}
+
+.profile-bio {
+  margin: 4px 0;
+}
+
+.profile-link {
+  color: #00376b;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* --- Stats --- */
+.profile-stats {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 12px 0;
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+  margin-bottom: 16px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* --- Content Grid --- */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+.grid-item {
+  width: 100%;
+  padding-top: 100%; /* This creates a square aspect ratio */
+  position: relative;
+  background-color: #efefef;
+}
+
+.grid-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- Sign Out Button --- */
+.sign-out-btn {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  border: none;
+  background: none;
+  color: #ef4444;
+  cursor: pointer;
+  font-size: 1rem;
+}
