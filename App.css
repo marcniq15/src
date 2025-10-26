@@ -1,0 +1,364 @@
+/* --- Home Page Styles --- */
+
+.home-page {
+    /* Add padding at the bottom to ensure content isn't hidden by the fixed BottomNav */
+    padding-bottom: 80px;
+}
+
+/* --- Announcement Card Styles --- */
+.announcement-card {
+    background-color: #f0eaff; /* A soft purple, related to our primary color */
+    margin: 16px;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #d1c4e9;
+}
+
+.announcement-header {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #4527a0; /* A darker shade of purple for the title */
+    margin-bottom: 12px;
+}
+
+.announcement-header .icon {
+    margin-right: 12px;
+    font-size: 24px;
+}
+
+.announcement-content {
+    color: #512da8;
+    margin-bottom: 12px;
+}
+
+.announcement-author {
+    font-size: 12px;
+    color: #7e57c2;
+    font-style: italic;
+}
+
+/* --- Section Header Styles --- */
+.section-header {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    padding: 0 16px;
+    margin-bottom: 16px;
+    margin-top: 24px;
+}
+
+/* --- Horizontal Item List Styles --- */
+.featured-items-container {
+    display: flex;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    padding: 0 16px 16px 16px; /* Padding for the scroll area */
+    /* Hides the scrollbar for a cleaner look */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.featured-items-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+}
+
+/* --- Item Card Styles --- */
+.item-card {
+    flex-shrink: 0; /* Prevents cards from shrinking in the flex container */
+    width: 300px;
+    margin-right: 16px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden; /* Ensures the image respects the border radius */
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.item-card:hover {
+    transform: translateY(-5px); /* Adds a subtle lift effect on hover */
+}
+
+.item-card-image {
+    position: relative;
+    height: 150px;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #9e9e9e;
+    font-size: 48px;
+}
+
+.item-card-image .gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+}
+
+.item-card-image .favorite-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: white;
+    font-size: 24px;
+}
+
+.item-card-details {
+    padding: 12px;
+}
+
+.item-card-details h3 {
+    font-size: 18px;
+    margin: 0 0 4px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item-card-details .author {
+    font-size: 12px;
+    color: #757575;
+    margin-bottom: 10px;
+}
+
+.item-card-details .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #6200EE;
+}
+
+/* --- Marketplace Page Styles --- */
+
+.marketplace-page {
+    padding: 24px 16px 80px 16px; /* Top, Sides, Bottom (for BottomNav) */
+}
+
+.page-header {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.items-grid {
+    display: grid;
+    /* This creates a responsive grid. It will try to fit as many 300px columns as it can. */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; /* The space between grid items */
+}
+
+/* --- Chats Page Styles --- */
+
+.chats-page {
+    padding: 24px 0 80px 0; /* Top, Sides, Bottom (for BottomNav) */
+}
+
+.chats-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-list-item {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.chat-list-item:hover {
+    background-color: #f9f9f9;
+}
+
+.chat-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    color: #9e9e9e;
+    margin-right: 16px;
+}
+
+.chat-content {
+    flex-grow: 1; /* Allows this element to take up the remaining space */
+    overflow: hidden; /* Prevents long text from breaking the layout */
+}
+
+.chat-name {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+}
+
+.chat-last-message {
+    color: #757575;
+    margin: 4px 0 0 0;
+    white-space: nowrap; /* Keeps the message on a single line */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adds '...' if the message is too long */
+}
+
+.chat-meta {
+    text-align: right;
+    font-size: 12px;
+    color: #9e9e9e;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.unread-badge {
+    background-color: #6200EE; /* Primary color */
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+/* --- Profile Page Styles --- */
+
+.profile-page {
+    padding-bottom: 80px; /* Space for BottomNav */
+}
+
+.profile-header {
+    background: linear-gradient(to right, #6200EE, #7e57c2);
+    color: white;
+    padding: 32px 24px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    margin-right: 20px;
+}
+
+.profile-info h1 {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.profile-info p {
+    font-size: 16px;
+    margin: 4px 0 0 0;
+    opacity: 0.8;
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 24px 16px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item .value {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.stat-item .label {
+    font-size: 14px;
+    color: #757575;
+}
+
+/* We can reuse the .section-header and .items-grid from other pages */
+
+.profile-items-list {
+    padding: 0 16px;
+}
+
+/* --- Settings Page Styles --- */
+
+.settings-page {
+    padding-bottom: 80px; /* Space for BottomNav */
+}
+
+/* We can reuse the .page-header style */
+
+.settings-group {
+    margin-top: 24px;
+}
+
+.settings-group-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #757575;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.settings-item {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.settings-item:hover {
+    background-color: #f9f9f9;
+}
+
+.settings-item-icon {
+    font-size: 24px;
+    color: #6200EE; /* Primary color */
+    margin-right: 16px;
+}
+
+.settings-item-content {
+    flex-grow: 1;
+}
+
+.settings-item-content h3 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.settings-item-content p {
+    font-size: 14px;
+    color: #757575;
+    margin: 4px 0 0 0;
+}
+
+.settings-item-action {
+    font-size: 24px;
+    color: #bdbdbd;
+}
+
+/* Special styling for the logout button */
+.settings-item.logout .settings-item-icon,
+.settings-item.logout .settings-item-content h3 {
+    color: #B00020; /* Error color */
+}
